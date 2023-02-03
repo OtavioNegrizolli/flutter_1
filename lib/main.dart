@@ -5,5 +5,5 @@ import 'package:contacts/ios/ios.app.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp(Platform.isIOS ? const AndroidApp() : const IOSApp());
+  runApp(Platform.isIOS ? const IOSApp() : const AndroidApp());
 }

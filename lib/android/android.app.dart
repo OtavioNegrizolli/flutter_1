@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import './views/home.view.dart';
+// import './views/splash.view.dart';
+import './styles.dart';
 
 class AndroidApp extends StatelessWidget {
   const AndroidApp({super.key});
@@ -7,11 +10,9 @@ class AndroidApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Text('Flutter Demo Home Page'),
+      title: 'Contacts',
+      theme: androidTheme(),
+      home: const HomeView(),
     );
   }
 }
