@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-const brightness = Brightness.light;
-const primaryColor = Color(0xFF2AACFF);
-const accentColor = Color(0xFFFFFFFF);
+const _brightness = Brightness.light;
+const _primaryColor = Color(0xFF2AACFF);
+const _accentColor = Color(0xFFFFFFFF);
 
 ThemeData androidTheme() {
   return ThemeData(
-    brightness: brightness,
+    brightness: _brightness,
     textTheme: const TextTheme(
       displayLarge: TextStyle(
         fontFamily: "Poppins",
@@ -54,7 +54,7 @@ ThemeData androidTheme() {
         fontFamily: "Poppins",
       ),
     ),
-    primaryColor: primaryColor,
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: accentColor),
+    primaryColor: _primaryColor,
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: _accentColor),
   );
 }
