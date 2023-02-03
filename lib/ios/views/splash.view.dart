@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:contacts/android/styles.dart';
+import 'package:contacts/ios/styles.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
