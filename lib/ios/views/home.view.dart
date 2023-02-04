@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:contacts/ios/styles.dart';
 
+import './editor-contact.view.dart';
 import './details.view.dart';
 
 class HomeView extends StatelessWidget {
@@ -12,20 +13,7 @@ class HomeView extends StatelessWidget {
     return CupertinoPageScaffold(
       child: CustomScrollView(
         slivers: <Widget>[
-          CupertinoSliverNavigationBar(
-            largeTitle: const Text("Meus Contatos"),
-            trailing: CupertinoButton.filled(
-              child: const Icon(CupertinoIcons.add),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  CupertinoPageRoute(
-                    builder: (context) => const HomeView(),
-                  ),
-                );
-              },
-            ),
-          ),
+          _navbar(context),
           SliverFillRemaining(
             child: Column(
               children: <Widget>[
@@ -41,6 +29,23 @@ class HomeView extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Widget _navbar(BuildContext context) {
+    return CupertinoSliverNavigationBar(
+      largeTitle: const Text("Meus Contatos"),
+      trailing: CupertinoButton.filled(
+        child: const Icon(CupertinoIcons.add),
+        onPressed: () {
+          Navigator.push(
+            context,
+            CupertinoPageRoute(
+              builder: (context) => const EditorContatcView(),
+            ),
+          );
+        },
       ),
     );
   }
